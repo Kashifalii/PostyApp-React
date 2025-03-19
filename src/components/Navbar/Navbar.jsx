@@ -13,7 +13,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import logo from "../../assets/Images/logo.webp";
+import logo from "../../assets/Images/logo.png";
 import profileImg from "../../assets/Images/profileImg.jpg";
 import { Link } from "react-router-dom";
 
