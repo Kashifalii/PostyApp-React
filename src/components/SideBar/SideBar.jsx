@@ -45,7 +45,7 @@ import LiveTvIcon from "@mui/icons-material/LiveTv";
 
 const drawerWidth = "19.5%";
 
-export default function FacebookSidebar() {
+export default function SideBar() {
   const [open, setOpen] = React.useState(false);
   const [postContent, setPostContent] = React.useState("");
   const [selectedImage, setSelectedImage] = React.useState(null);

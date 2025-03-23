@@ -188,7 +188,6 @@ export default function Navbar() {
               sx={{
                 width: 50,
                 height: 50,
-                borderRadius: "50%",
                 objectFit: "cover",
                 mr: 2,
               }}
@@ -217,7 +216,7 @@ export default function Navbar() {
             </IconButton>
             <IconButton
               component={Link}
-              to="/videos"
+              to="/Reels"
               size="large"
               color="inherit"
               aria-label="videos"
@@ -226,10 +225,10 @@ export default function Navbar() {
             </IconButton>
             <IconButton
               component={Link}
-              to="/groups"
+              to="/Friends"
               size="large"
               color="inherit"
-              aria-label="groups"
+              aria-label="Friends"
             >
               <GroupRoundedIcon fontSize="large" />
             </IconButton>

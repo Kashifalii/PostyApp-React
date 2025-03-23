@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
 import { Box } from "@mui/material";
-// import Videos from "../Pages/Videos";
-// import Groups from "../Pages/Groups";
+import Reels from "../Pages/Reels";
+import Friends from "../Pages/Friends";
 // import Store from "../Pages/Store";
 
 function ContentWrapper() {
@@ -21,9 +21,9 @@ function ContentWrapper() {
     >
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/videos" element={<Videos />} />
-        <Route path="/groups" element={<Groups />} />
-        <Route path="/store" element={<Store />} /> */}
+        <Route path="/Reels" element={<Reels />} />
+        <Route path="/Friends" element={<Friends />} />
+        {/* <Route path="/store" element={<Store />} /> */}
       </Routes>
     </Box>
   );
