@@ -25,8 +25,8 @@ import axios from "axios";
 const theme = createTheme({
   palette: {
     mode: "dark",
-    primary: { main: "#2e7d32" },
-    secondary: { main: "#d32f2f" },
+    primary: { main: "#636e6c" },
+    secondary: { main: "#BE3144" },
     background: { default: "#121212", paper: "#1c1c1c" },
   },
   typography: {
@@ -248,10 +248,13 @@ const Friends = () => {
         {actionType === "current" && (
           <Button
             variant="outlined"
-            color="error"
-            size="small"
             onClick={(e) => handleAction("remove", user, e)}
-            sx={{ mt: "auto" }}
+            sx={{
+              mt: "auto",
+              color: "#BE3144",
+              borderColor: "#BE3144",
+              borderRadius: 50,
+            }}
           >
             Remove Friend
           </Button>
@@ -265,6 +268,7 @@ const Friends = () => {
               size="small"
               fullWidth
               onClick={(e) => handleAction("accept", user, e)}
+              sx={{ borderRadius: 50 }}
             >
               Accept
             </Button>
@@ -274,6 +278,12 @@ const Friends = () => {
               size="small"
               fullWidth
               onClick={(e) => handleAction("decline", user, e)}
+              sx={{
+                mt: "auto",
+                color: "#BE3144",
+                borderColor: "#BE3144",
+                borderRadius: 50,
+              }}
             >
               Decline
             </Button>
@@ -286,7 +296,7 @@ const Friends = () => {
             color="primary"
             size="small"
             fullWidth
-            sx={{ mt: "auto" }}
+            sx={{ mt: "auto", borderRadius: 50 }}
             onClick={(e) => handleAction("add", user, e)}
           >
             Add Friend
@@ -314,11 +324,7 @@ const Friends = () => {
         </Grid>
 
         {items.length > initialShow && (
-          <Button
-            variant="outlined"
-            sx={{ mt: 3 }}
-            onClick={() => setShowMore(!showMore)}
-          >
+          <Button sx={{ mt: 3 }} onClick={() => setShowMore(!showMore)}>
             {showMore ? "Show Less" : `Show More`}
           </Button>
         )}
@@ -328,26 +334,26 @@ const Friends = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="xl" sx={{ py: 4 }}>
+      <Container maxWidth="xl" sx={{ py: 3 }}>
         <Section
           title="Current Friends"
           items={currentFriends}
           actionType="current"
-          initialShow={8}
+          initialShow={4}
         />
 
         <Section
           title="Friend Requests"
           items={requests}
           actionType="request"
-          initialShow={8}
+          initialShow={4}
         />
 
         <Section
           title="People You May Know"
           items={suggestions}
           actionType="suggestion"
-          initialShow={8}
+          initialShow={4}
         />
 
         <ProfileModal user={selectedProfile} />
